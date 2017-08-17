@@ -1,0 +1,33 @@
+{
+  "name": "vcms-quick-starter-dev",
+  "version": "1.0.0",
+  "description": "development project for the vcms quick starter",
+  "scripts": {
+    "install-deps": "yarn install && cd src && bower install",
+    "clean": "rm -rf build",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vdegenne/vcms-quick-starter.git"
+  },
+  "keywords": [
+    "vcms",
+    "framework",
+    "quick-starter",
+    "polymer",
+    "js"
+  ],
+  "author": "Valentin Degenne <vdegenne@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vdegenne/vcms-quick-starter/issues"
+  },
+  "homepage": "https://github.com/vdegenne/vcms-quick-starter#readme",
+  "devDependencies": {
+    "fs-extra": "^4.0.1",
+    "gulp": "^3.9.1",
+    "merge-stream": "^1.0.1",
+    "run-sequence": "^2.1.0"
+  }
+}

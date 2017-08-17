@@ -1,0 +1,41 @@
+<link rel="import" href="../../paper-dialog/paper-dialog.html">
+<link rel="import" href="../../paper-button/paper-button.html">
+
+<dom-module id="smart-dialog">
+  <template>
+
+     <paper-dialog id="dialog" modal>
+        <h2>{{title}}</h2>
+        <p>{{message}}</p>
+        <div class="controls">
+           <paper-button dialog-confirm on-click="_executeFunction">Ok</paper-button>
+           <paper-button dialog-dismiss>Cancel</paper-button>
+        </div>
+     </paper-dialog>
+  </template>
+  <script>
+  class SmartDialog extends Polymer.Element
+  {
+    static get is () { return 'smart-dialog'; }
+
+    static get properties () {
+      return {
+        function: Function,
+        title: String,
+        message: String
+      }
+    }
+
+    _executeFunction () {
+      if (this.function !== undefined) {
+        this.function();
+      }
+    }
+
+    open () {
+      this.$.dialog.open();
+    }
+  }
+  customElements.define(SmartDialog.is, SmartDialog);
+  </script>
+</dom-module>

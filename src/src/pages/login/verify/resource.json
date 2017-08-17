@@ -1,0 +1,8 @@
+{
+    "type": "rest",
+
+    "post_params": ["email", "password"],
+
+    "needs_authentication": false,
+    "is_auth_page": true
+}

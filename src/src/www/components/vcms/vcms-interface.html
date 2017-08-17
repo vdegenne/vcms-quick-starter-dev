@@ -1,0 +1,44 @@
+<link rel="import" href="../vcms-polymer/lib/mixins/app-data-mixin.html">
+<link rel="import" href="../paper-styles/paper-styles.html">
+<link rel="import" href="./vcms-app-bar.html">
+<link rel="import" href="./resource-board.html">
+<link rel="import" href="./breadcrumbs-location.html">
+
+
+<dom-module id="vcms-interface">
+  <template>
+     <style>
+        :host {
+           @apply --layout-fit;
+           display: block;
+           background: url(/img/background.png);
+           background-position-x: 50%;
+        }
+     </style>
+     <app-toaster>
+
+        <vcms-app-bar connect-mode></vcms-app-bar>
+
+        <resource-board></resource-board>
+        <breadcrumbs-location></breadcrumbs-location>
+     </app-toaster>
+  </template>
+  <script>
+  class VcmsInterface extends Vcms.AppDataElement
+  {
+    static get is () { return 'vcms-interface'; }
+
+    static get properties () {}
+    static get observers () {
+      return []
+    }
+
+    connectedCallback () {
+      super.connectedCallback();
+
+      this.setAppData('resource.location', '');
+    }
+  }
+  customElements.define(VcmsInterface.is, VcmsInterface);
+  </script>
+</dom-module>

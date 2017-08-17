@@ -1,0 +1,11 @@
+{
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/vdegenne/vcms.git"
+        }
+    ],
+    "require": {
+        "vdegenne/vcms": "^3.0.0"
+    }
+}

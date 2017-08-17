@@ -1,0 +1,11 @@
+{
+  "type": "web",
+
+  "metadatas": {
+    "title": "Page Title",
+    "description": "",
+    "keywords": ""
+  },
+
+  "inlines": ["css/main.html"]
+}

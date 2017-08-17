@@ -1,0 +1,15 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "install": "yarn install && cd src && bower install"
+  },
+  "author": "my name",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1"
+  }
+}

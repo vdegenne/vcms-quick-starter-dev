@@ -1,0 +1,9 @@
+{
+  "type": "web",
+
+  "metadatas": {
+    "title": "Page not Found."
+  },
+
+  "needs_authentication": false
+}

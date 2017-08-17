@@ -1,0 +1,9 @@
+{
+    "type": "web",
+
+    "metadatas": {
+        "title": "logout"
+    },
+
+    "needs_authentication": true
+}

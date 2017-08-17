@@ -1,0 +1,8 @@
+{
+    "type": "web",
+    "metadatas": {
+        "title": "vcms interface"
+    },
+
+    "needs_authentication": false
+}

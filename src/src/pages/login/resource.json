@@ -1,0 +1,9 @@
+{
+    "type": "Web",
+
+    "metadatas": {
+        "title": "login please"
+    },
+
+    "needs_authentication": false
+}

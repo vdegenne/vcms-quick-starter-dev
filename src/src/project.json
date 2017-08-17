@@ -1,0 +1,6 @@
+{
+    "name": "vcms-project-starter",
+
+    "env": "dev",
+    "credentials_file": "<credentials_direpath_here>"
+}
