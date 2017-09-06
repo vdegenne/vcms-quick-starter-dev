@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "development project for the vcms quick starter",
   "scripts": {
-    "install-deps": "yarn install && cd src && bower install",
     "clean": "rm -rf build",
     "build": "gulp build"
   },
