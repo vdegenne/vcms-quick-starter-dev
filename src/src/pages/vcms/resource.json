@@ -4,5 +4,5 @@
         "title": "vcms interface"
     },
 
-    "needs_authentication": false
+    "needs-authentication": false
 }

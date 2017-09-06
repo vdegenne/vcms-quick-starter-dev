@@ -1,10 +1,10 @@
 <?php
-
 /** @var \vcms\utils\Authentication $Authentication */
-if ($Authentication->verify($email, $password)) {
-    $Session->User = $Authentication->User;
-    $Feedback->success('authentication success.');
+$success = $Authentication->authenticate($email, $password);
+
+if ($success) {
+    $Feedback->success('authentication success', $Authentication->User);
 }
 else {
-    $Feedback->failure('username or password incorrect.');
+    $Feedback->failure('the login informations are not valid');
 }

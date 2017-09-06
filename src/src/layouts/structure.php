@@ -7,11 +7,13 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
 
 <title><?= $Project->name . ' ~ ' . $title ?></title>
+
+<script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+
 <?php @include $head; ?>
 
 <?=$inlines?>
 
-<script src="/components/webcomponentsjs/webcomponents-lite.js"></script>
 </head>
 
 <body>

@@ -9,4 +9,4 @@ Or else the build will not contains all the necessary files.
 
 ### building
 
-```yarn run build```
+```yarn run build``` 

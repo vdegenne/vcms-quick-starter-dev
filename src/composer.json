@@ -6,6 +6,6 @@
         }
     ],
     "require": {
-        "vdegenne/vcms": "^3.0.0"
+        "vdegenne/vcms": "^4.2.0"
     }
 }

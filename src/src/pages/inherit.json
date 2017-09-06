@@ -1,0 +1,11 @@
+{
+    "needs-database": true,
+    "database": "remote",
+
+    "needs-authentication": false,
+    "authentication-uri": "login",
+    "authentication-table": "vcms.users",
+
+
+    "translations-schema": "vcms"
+}

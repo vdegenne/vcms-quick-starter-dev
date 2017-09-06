@@ -5,7 +5,7 @@
   "authors": [
     "my-name"
   ],
-  "license": "MIT",
+  "license": "BSD-3-Clause",
   "keywords": [
     "cms",
     "php",
@@ -20,14 +20,14 @@
     "tests"
   ],
   "dependencies": {
+    "vcms-polymer": "^5.2.0",
+    "paper-dialog": "^2.0.0",
     "webcomponentsjs": "^1.0.8",
     "app-route": "PolymerElements/app-route#^2.0.2",
     "iron-pages": "PolymerElements/iron-pages#^2.0.0",
     "app-layout": "PolymerElements/app-layout#^2.0.1",
     "iron-selector": "PolymerElements/iron-selector#^2.0.0",
-    "paper-icon-button": "PolymerElements/paper-icon-button#^2.0.0"
-  },
-  "devDependencies": {
-    "vcms-polymer": "^4.0.0"
+    "paper-icon-button": "PolymerElements/paper-icon-button#^2.0.0",
+    "polymer": "^2.0.2"
   }
 }

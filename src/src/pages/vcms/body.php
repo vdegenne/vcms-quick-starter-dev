@@ -11,11 +11,12 @@ if (!isset($_SESSION['VUser'])) {
 
 /* redirect if no continue GET parameter */
 if (!$VUser->isAuthenticated && !isset($QueryString->continue)) {
-    header('location: ?continue=http://vcms-quick-starter.local/vcms');
+    header('location: ?continue=/vcms');
 }
 
 
 if (!$VUser->isAuthenticated): ?>
+
    <custom-style>
       <style>
          html {
@@ -31,13 +32,9 @@ if (!$VUser->isAuthenticated): ?>
       </style>
    </custom-style>
 
-   <vcms-app-bar></vcms-app-bar>
-
-   <div id="signin-wrapper">
-      <signin-interface action="vcms/login"></signin-interface>
-   </div>
+   <vcms-shell></vcms-shell>
 <?php else: ?>
 
-   <vcms-interface></vcms-interface>
+<vcms-shell></vcms-shell>
 
 <?php endif; ?>

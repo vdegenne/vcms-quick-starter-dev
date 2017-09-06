@@ -1,12 +1,3 @@
-<link rel="import" href="/components/application-name/application-name.html">
-
-<style>
-  body {
-    font-family: "Roboto";
-    margin: 0;
-  }
-</style>
-
 <?php
 //$request = new \vcms\Request('api/users?action=informations', 'get');
 ///** @var \vcms\resources\RestResource $resource */
@@ -24,5 +15,4 @@
 //}
 </script>
 
-
-<application-name></application-name>
+<app-shell></app-shell>

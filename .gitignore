@@ -1,3 +1,5 @@
+.todo
+.vscode
 vcms-quick-starter
 .idea
 node_modules
@@ -6,5 +8,4 @@ build
 composer.lock
 yarn.lock
 src/src/www/components/*
-!src/src/www/components/vcms
-!src/src/www/components/webcomponentsjs
+bower_components
