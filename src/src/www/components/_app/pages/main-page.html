@@ -1,0 +1,23 @@
+<link rel="import" href="../../../bower_components/vcms-polymer/lib/mixins/vcms-app-element.html">
+
+<dom-module id="main-page">
+  <template>
+    <style include="vcms-styles page-styles">
+    </style>
+
+    <div class=container>
+      <h1 style=text-align:center>Main Page</h1>
+      <p>insert text here</p>
+    </div>
+
+  </template>
+
+  <script>
+  class MainPage extends Vcms.AppElement {
+
+    static get is() { return 'main-page' }
+
+  }
+  window.customElements.define(MainPage.is, MainPage);
+  </script>
+</dom-module>

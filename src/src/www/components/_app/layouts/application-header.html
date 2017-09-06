@@ -1,0 +1,55 @@
+<link rel="import" href="../../../bower_components/vcms-polymer/lib/mixins/vcms-app-element.html">
+
+
+<dom-module id="application-header">
+  <template>
+    <style include="vcms-styles iron-flex">
+      :host {
+        display: block;
+        @apply --layout-horizontal;
+        @apply --layout-center;
+        height: 70px;
+        background-color: var(--app-first-color);
+        color: #fff;
+      }
+      .container {
+        @apply --layout-horizontal;
+        @apply --layout-center;
+      }
+
+      iron-icon[icon=menu] {
+        display: none;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+
+      @media (max-width: 425px) {
+        :host {
+          height: 60px;
+        }
+
+        iron-icon[icon=menu] {
+          display: block;
+        }
+      }
+    </style>
+
+    <div class=container>
+      <iron-icon icon=menu on-click=_openMenu></iron-icon>
+      <p class="flex">My Application <sup>&copy;</sup></p>
+      <slot></slot>
+    </div>
+  </template>
+
+  <script>
+  class ApplicationHeader extends Vcms.AppElement {
+
+    static get is() { return 'application-header' }
+
+    _openMenu() {
+      this.setAppData('drawerOpened', true);
+    }
+  }
+  window.customElements.define(ApplicationHeader.is, ApplicationHeader);
+  </script>
+</dom-module>

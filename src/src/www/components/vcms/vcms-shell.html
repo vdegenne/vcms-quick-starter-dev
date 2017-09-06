@@ -1,0 +1,22 @@
+<link rel="import" href="./polymers.html">
+<link rel="import" href="vcms-signin.html">
+
+<dom-module id="vcms-shell">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <p>this interface coming soon</p>
+  </template>
+
+  <script>
+  class VcmsShell extends Polymer.Element {
+
+    static get is() { return 'vcms-shell' }
+
+  }
+  window.customElements.define(VcmsShell.is, VcmsShell);
+  </script>
+</dom-module>

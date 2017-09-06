@@ -1,0 +1,114 @@
+<link rel="import" href="./polymers.html">
+<link rel="import" href="../../bower_components/vcms-polymer/vcms-polymer.html">
+
+<link rel="import" href="./layouts/application-header.html">
+<link rel="import" href="./pages/pages.html">
+
+
+<custom-style>
+<style>
+  html {
+    --app-first-color: #24292e;
+  }
+</style>
+</custom-style>
+
+
+<dom-module id="app-shell">
+  <template>
+    <style include="vcms-styles">
+      :host {
+        @apply --layout-fit;
+      }
+
+      app-drawer {
+        z-index: 1;
+      }
+
+      application-header a {
+        color: #fff;
+      }
+
+      @media (max-width: 425px) {
+        application-header a {
+          display: none;
+        }
+      }
+    </style>
+
+    <app-location route="{{route}}"></app-location>
+    <app-route
+            route={{route}}
+            pattern=/:page
+            data={{routeData}}
+            tail={{subroute}}></app-route>
+
+
+    <app-drawer opened=[[AppData.drawerOpened]] onclick=this.opened=false>
+      <iron-selector selected=[[page]] attr-for-selected=name>
+      </iron-selector>
+    </app-drawer>
+
+    <app-toaster>
+      <application-header>
+        <iron-selector attr-for-selected=name selected=[[page]]>
+          <a href=/test>test</a>
+        </iron-selector>
+      </application-header>
+
+      <iron-pages attr-for-selected=page selected="[[page]]">
+        <main-page page=""></main-page>
+        <div page=404>
+          <div class=container>
+            <p>not find sorry</p>
+          </div>
+        </div>
+      </iron-pages>
+    </app-toaster>
+  </template>
+
+  <script>
+  class AppShell extends Vcms.AppElement {
+
+    static get is() { return 'app-shell'; }
+
+    static get properties() { return {
+
+      pages: {
+        type: Array,
+        value: [{
+          name: '',
+          href: '/'
+        }]
+      }
+    }}
+
+    ready() {
+      super.ready();
+      Polymer.RenderStatus.afterNextRender(this, _ => {
+        if (window.inject_data) {
+          window.inject_data();
+        }
+      });
+    }
+
+    static get observers() { return [
+      '_routePageChanged(routeData.page)'
+    ]}
+
+    _routePageChanged(page) {
+      if (page === '404') {
+        return;
+      }
+
+      if (!this.pages.filter(p => p.name === page).length) {
+        this.page = '404';
+        return;
+      }
+      this.page = page;
+    }
+  }
+
+  window.customElements.define(AppShell.is, AppShell);
+  </script>
+</dom-module>

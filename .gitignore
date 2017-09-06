@@ -7,5 +7,4 @@ vendor
 build
 composer.lock
 yarn.lock
-src/src/www/components/*
 bower_components

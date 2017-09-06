@@ -1,0 +1,32 @@
+<link rel="import" href="../../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="page-styles">
+  <template>
+    <style>
+      :host {
+        display: block;
+        margin: 0 auto;
+        opacity: 0;
+
+        transition: opacity .3s linear;
+      }
+
+      :host(.iron-selected) {
+        opacity: 1;
+      }
+
+      a {
+        color: var(--paper-blue-500);
+      }
+      a:hover {
+        color: var(--paper-blue-800);
+      }
+
+      @media (max-width: 768px) {
+        :host {
+          width: calc(100% - 20px);
+        }
+      }
+    </style>
+  </template>
+</dom-module>
